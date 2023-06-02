@@ -1,0 +1,19 @@
+.product-card {
+  --gap: 13px;
+  padding: 0;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(var(--column-count, 2), 1fr);
+
+  @media #{$not-mobile} {
+    --column-count: 1;
+  }
+}
+
+.product-card__title {
+  color: #222222;
+}
+
+.product-card__characteristic-wrapper {
+  display: flex;
+}

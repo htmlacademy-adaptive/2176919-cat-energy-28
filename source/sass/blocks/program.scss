@@ -1,0 +1,49 @@
+.program {
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  color: var(--additional-color);
+}
+
+.program__description {
+  color: var(--main-color);
+}
+
+.program__group {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.program__list-input {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-end;
+
+  &--radio {
+    align-items: flex-start;
+    gap: 13px;
+  }
+}
+
+.program__item-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.program__label-input {
+  flex-shrink: 0;
+  margin-right: 13px;
+}
+
+.program__input {
+  width: 100%;
+}
+
+.program__remark {
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: none;
+}

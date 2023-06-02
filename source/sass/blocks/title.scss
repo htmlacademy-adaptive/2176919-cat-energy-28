@@ -1,0 +1,32 @@
+.title {
+  --size: 36px;
+  --line: 1;
+  font-family: var(--accent-font);
+  font-size: var(--size);
+  line-height: var(--line);
+  text-transform: none;
+  color: var(--main-color);
+}
+
+.title--lvl2 {
+  --line: 1.1;
+}
+
+.title--lvl3 {
+  --size: 24px;
+  --line: 1.5;
+}
+
+.title--lvl3-form {
+  --line: 1.08;
+}
+
+.title--lvl4 {
+  --size: 16px;
+  --line: 1.25;
+  text-transform: uppercase;
+}
+
+.title--lvl4-catalog {
+  --line: 1;
+}

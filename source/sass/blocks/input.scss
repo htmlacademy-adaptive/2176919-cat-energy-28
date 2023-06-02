@@ -1,0 +1,57 @@
+.input {
+  padding: 14px 20px 13px 20px;
+  font-family: var(--accent-font);
+  font-size: 16px;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: var(--additional-color);
+}
+
+.input--radio {
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  border-radius: 50%;
+  border: solid 1px transparent;
+  outline: solid 1px #cdcdcd;
+  outline-offset: 11px;
+  transition-duration: 140ms;
+  transition-timing-function: ease-in-out;
+  flex-shrink: 0;
+
+  &:checked {
+    background-color: var(--accent-color);
+  }
+
+  &:focus-visible {
+    outline: solid 2px #000000;
+  }
+}
+
+.input--checkbox {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  appearance: none;
+  border: solid 1px #cdcdcd;
+  transition-duration: 140ms;
+  transition-timing-function: ease-in-out;
+  flex-shrink: 0;
+
+  &:checked {
+    &::before {
+      content: "";
+      width: 18px;
+      height: 14px;
+      background-image: var(--mark);
+    }
+  }
+}
+
+.input--textarea {
+  resize: none;
+}

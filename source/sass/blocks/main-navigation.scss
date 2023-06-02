@@ -1,0 +1,23 @@
+.main-navigation {
+  text-align: center;
+}
+
+.main-navigation__list {
+  position: absolute;
+  display: none;
+  width: 100%;
+  min-height: 65px;
+  background-color: #ffffff;
+}
+
+.main-navigation__link {
+  padding: 22px 0 23px 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  border-bottom: solid 1px #e6e6e6;
+}
+
+.main-navigation__toggle {
+  cursor: pointer;
+}

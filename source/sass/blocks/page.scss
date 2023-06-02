@@ -1,0 +1,30 @@
+.page {
+  width: 100%;
+  height: 100%;
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--main-color);
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  max-width: 1440px;
+  min-height: 100%;
+  background-color: #ffffff;
+  color: var(--main-color);
+}
+
+.page__centerer {
+  margin-inline: 20px;
+
+  @media #{$not-mobile} {
+    margin-inline: 30px;
+  }
+
+  @media #{$desktop-only} {
+    inline-size: 1220px;
+    margin-inline: auto;
+  }
+}

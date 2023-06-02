@@ -1,0 +1,27 @@
+.additional-card {
+  --gap: 13px;
+  padding: 0;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(var(--column-count, 2), 1fr);
+
+  @media #{$not-mobile} {
+    --column-count: 3;
+  }
+
+  @media #{$desktop-only} {
+    --column-count: 4;
+  }
+}
+
+.additional-card__link {
+  grid-column: 1/-1;
+}
+
+.additional-card__title {
+  color: #222222;
+}
+
+.additional-card__button {
+  grid-column: 1/-1;
+}

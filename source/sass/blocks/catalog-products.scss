@@ -1,0 +1,15 @@
+.catalog-products__list {
+  --gap: 1rem;
+  padding: 0;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(var(--column-count, 1), 1fr);
+
+  @media #{$not-mobile} {
+    --column-count: 2;
+  }
+
+  @media #{$desktop-only} {
+    --column-count: 4;
+  }
+}
