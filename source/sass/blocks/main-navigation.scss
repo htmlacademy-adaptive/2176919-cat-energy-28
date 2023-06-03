@@ -3,11 +3,75 @@
 }
 
 .main-navigation__list {
+  margin: 0;
   position: absolute;
-  display: none;
   width: 100%;
   min-height: 65px;
   background-color: #ffffff;
+  top: 65px;
+  left: 0;
+  z-index: 2;
+
+  &--close {
+    @media #{$mobile-only} {
+      display: none;
+
+      ~ .main-navigation__toggle::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 2px;
+        background-color: #000000;
+        box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+      }
+    }
+  }
+
+  &--opened {
+    @media #{$mobile-only} {
+      ~ .main-navigation__toggle {
+        background-color: #ffffff;
+
+        &::before,
+        &::after {
+          content: "";
+          right: 1px;
+          top: 6px;
+          position: absolute;
+          width: 25px;
+          height: 2px;
+          background-color: #000000;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+          box-shadow: none;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    &:first-child {
+      border-top: solid 1px #e6e6e6;
+    }
+  }
+
+  &--nojs {
+    position: relative;
+
+    @media #{$mobile-only} {
+      display: block;
+
+      ~ .main-navigation__toggle {
+        display: none;
+      }
+    }
+  }
 }
 
 .main-navigation__link {
@@ -20,4 +84,17 @@
 
 .main-navigation__toggle {
   cursor: pointer;
+  position: relative;
+  display: none;
+
+  @media #{$mobile-only} {
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 24px;
+    height: 16px;
+    background-color: #ffffff;
+    border: none;
+  }
 }

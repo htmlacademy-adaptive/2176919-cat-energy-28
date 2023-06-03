@@ -1,0 +1,27 @@
+.main-header__container {
+  --gap: 56px;
+  padding: 10px 0 18px 0;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(var(--column-count, 3), 1fr);
+  justify-items: end;
+  align-items: center;
+
+  @media #{$not-mobile} {
+    --column-count: 4;
+  }
+}
+
+.main-header__logo {
+  @media #{$mobile-only} {
+    display: contents;
+  }
+}
+
+.main-header__logo-image {
+  justify-self: start;
+}
+
+.main-header__logo-world {
+  justify-self: center;
+}
