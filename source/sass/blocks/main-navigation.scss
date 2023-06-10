@@ -3,6 +3,7 @@
 }
 
 .main-navigation__list {
+  @include reset-list;
   margin: 0;
   position: absolute;
   width: 100%;
@@ -26,6 +27,15 @@
         background-color: #000000;
         box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
       }
+    }
+
+    @media #{$not-mobile} {
+      position: relative;
+      top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      background-color: transparent;
     }
   }
 
@@ -75,11 +85,27 @@
 }
 
 .main-navigation__link {
+  @include link;
   padding: 22px 0 23px 0;
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
   border-bottom: solid 1px #e6e6e6;
+
+  @media #{$not-mobile} {
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.3;
+    border: none;
+  }
+
+  &--main {
+    @media #{$desktop-only} {
+      color: #ffffff;
+      background-color: transparent;
+    }
+  }
 }
 
 .main-navigation__toggle {

@@ -14,20 +14,20 @@
   <header class="main-header page__header">
     <div class="page__centerer">
       <div class="main-header__container">
-        <a class="main-header__logo logo link" href="#">
-          <img class="main-header__logo-image" src="" alt="Эмблема интернет-магазина Кэт энерджи." width="101" height="18">
-          <img class="main-header__logo" src="" alt="Логотип интернет-магазина Кэт энерджи." width="101" height="18">
+        <a class="main-header__logo logo" href="index.html">
+          <img class="main-header__logo-image" src="./img/logo-mark.svg" alt="Эмблема интернет-магазина Кэт энерджи." width="33" height="37">
+          <img class="main-header__logo-world" src="./img/logo.svg" alt="Логотип интернет-магазина Кэт энерджи." width="101" height="18">
         </a>
         <nav class="main-navigation">
-          <ul class="main-navigation__list list main-navigation__list--close main-navigation__list--nojs">
+          <ul class="main-navigation__list main-navigation__list--close main-navigation__list--nojs">
             <li class="main-navigation__item">
-              <a class="main-navigation__link link main-navigation__link--current" href="index.html">Главная</a>
+              <a class="main-navigation__link main-navigation__link--current" href="index.html">Главная</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link link" href="catalog.html">Каталог продукции</a>
+              <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link link" href="form.html">Подбор программы</a>
+              <a class="main-navigation__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
           <button class="main-navigation__toggle" type="button">
@@ -41,12 +41,12 @@
     <section class="form-index__program program">
       <div class="page__centerer">
         <div class="program__container">
-          <h1 class="form-index__title titleproduct-card__title title title--lvl4">Подбор программы</h1>
+          <h1 class="form-index__title">Подбор программы</h1>
           <p class="program__description">Заполните анкету, и&nbsp;мы&nbsp;подберем программу питания для вашего кота</p>
           <form class="program__form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="program__group program__group--questionnaire">
               <legend class="visually-hidden">Введите данные кота.</legend>
-              <ul class="program__list-input list">
+              <ul class="program__list-input">
                 <li class="program__item-input">
                   <label class="program__label-input" for="cat-name">Имя:*</label>
                   <input class="program__input input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
@@ -63,30 +63,24 @@
             </fieldset>
             <fieldset class="program__group program__group--radio">
               <legend class="visually-hidden">К чему стремится ваш кот?</legend>
-              <ul class="program__list-input program__list-input--radio list">
+              <ul class="program__list-input program__list-input--radio">
                 <li class="program__item">
-                  <label class="program__label control" for="weight-loss">
-                    <input class="control__input input input--radio" id="weight-loss" type="radio" name="program" value="weight-loss" checked>
-                    <span class="control__label">Похудение</span>
-                  </label>
+                  <input class="program__input-control input input--radio" id="weight-loss" type="radio" name="program" value="weight-loss" checked>
+                  <label class="program__label-input" for="weight-loss">Похудение</label>
                 </li>
                 <li class="program__item">
-                  <label class="program__label control" for="mass-gain">
-                    <input class="control__input input input--radio" id="mass-gain" type="radio" name="program" value="mass-gain">
-                    <span class="control__label">Набор массы</span>
-                  </label>
+                  <input class="program__input-control input input--radio" id="mass-gain" type="radio" name="program" value="mass-gain">
+                  <label class="program__label-input" for="mass-gain">Набор массы</label>
                 </li>
                 <li class="program__item">
-                  <label class="program__label control" for="need-advice">
-                    <input class="control__input input input--radio" id="need-advice" type="radio" name="program" value="need-advice">
-                    <span class="control__label">Не знаю (Нужен ваш совет)</span>
-                  </label>
+                  <input class="program__input-control input input--radio" id="need-advice" type="radio" name="program" value="need-advice">
+                  <label class="program__label-input" for="need-advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="program__group program__group--contacts">
-              <legend class="program__title title title--lvl3 title--lvl3-form">Контактные данные (владельца кота)</legend>
-              <ul class="program__list-input list">
+              <legend class="program__title">Контактные данные (владельца кота)</legend>
+              <ul class="program__list-input program__list-input--icon">
                 <li class="program__item-input program__item-input--email">
                   <label class="program__label-input" for="contacts-email">E-mail:*</label>
                   <input class="program__input input" type="email" id="contacts-email" name="contacts-email" placeholder="кuklachev@gmail.com" required>
@@ -98,65 +92,57 @@
               </ul>
             </fieldset>
             <div class="program__group program__group--comment">
-              <label class="program__title title title--lvl3 title--lvl3-form" for="comment">Комментарий</label>
+              <label class="program__title" for="comment">Комментарий</label>
               <textarea class="program__textarea input input--textarea" id="comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
             <fieldset class="program__group program__group--additionally">
-              <legend class="program__title title title--lvl3 title--lvl3-form">Дополнительно</legend>
-              <ul class="program__list list">
+              <legend class="program__title">Дополнительно</legend>
+              <ul class="program__list">
                 <li class="program__item">
-                  <label class="program__label control" for="sweetener">
-                    <input class="control__input input input--checkbox" id="sweetener" type="checkbox" name="additionally" value="sweetener" checked>
-                    <span class="control__label">сахарозаменитель</span>
-                  </label>
+                  <input class="program__input-control input input--checkbox" id="sweetener" type="checkbox" name="additionally" value="sweetener" checked>
+                  <label class="program__label-input" for="sweetener">сахарозаменитель</label>
                 </li>
                 <li class="program__item">
-                  <label class="program__label control" for="drinking-water">
-                    <input class="control__input input input--checkbox" id="drinking-water" type="checkbox" name="additionally" value="drinking-water">
-                    <span class="control__label">питьевая вода</span>
-                  </label>
+                  <input class="program__input-control input input--checkbox" id="drinking-water" type="checkbox" name="additionally" value="drinking-water">
+                  <label class="program__label-input" for="drinking-water">питьевая вода</label>
                 </li>
                 <li class="program__item">
-                  <label class="program__label control" for="milk">
-                    <input class="control__input input input--checkbox" id="milk" type="checkbox" name="additionally" value="milk">
-                    <span class="control__label">молоко</span>
-                  </label>
+                  <input class="program__input-control input input--checkbox" id="milk" type="checkbox" name="additionally" value="milk">
+                  <label class="program__label-input" for="milk">молоко</label>
                 </li>
                 <li class="program__item">
-                  <label class="program__label control" for="vitamins">
-                    <input class="control__input input input--checkbox" id="vitamins" type="checkbox" name="additionally" value="vitamins">
-                    <span class="control__label">витамины</span>
-                  </label>
+                  <input class="program__input-control input input--checkbox" id="vitamins" type="checkbox" name="additionally" value="vitamins">
+                  <label class="program__label-input" for="vitamins">витамины</label>
                 </li>
               </ul>
             </fieldset>
             <div class="program__wrapper">
-              <button class="program__button button" type="submit">Отправить заявку</button>
+              <button class="program__button" type="submit">Отправить заявку</button>
               <p class="program__remark">* — Обязательные поля</p>
             </div>
           </form>
         </div>
       </div>
     </section>
-    <section class="form-index__map map map--nojs">
+    <section class="form-index__map map map--inner map--nojs">
       <div class="page__centerer">
         <div class="map__container">
-          <h2 class="map__title title title--lvl4">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+          <h2 class="map__title">Приглашаем <br> к&nbsp;сотрудничеству <br> дилеров!</h2>
           <address class="map__address address">
             <span class="address__text">ул. Большая</span>
             <span class="address__text">Конюшенная, д. 19/8</span>
-            <span class="address__text">Санкт-Петербург</span>
+            <span class="address__text address__text--city">Санкт-Петербург</span>
           </address>
         </div>
       </div>
       <div class="map__wrapper">
         <picture>
-          <source media="(min-width: 769px)" srcset="" width="1440" height="400">
-          <source media="(min-width: 321px) and (max-width: 768px)" srcset="" width="768" height="400">
-          <source type="image/webp" srcset="" width="320" height="362">
-          <source media="(min-width: 769px)" srcset="" width="1440" height="400">
-          <source media="(min-width: 321px) and (max-width: 768px)" srcset="" width="768" height="400">
-          <img class="map__image" src="" srcset="" alt="Карта Санкт-Петербурга с отметкой на нашем офисе." width="320" height="362" loading="lazy">
+          <source media="(min-width: 769px)" srcset="./img/map-desktop@2x.jpg" width="1440" height="400">
+          <source media="(min-width: 321px) and (max-width: 768px)" srcset="./img/map-tablet@2x.jpg" width="768" height="400">
+          <source type="image/webp" srcset="./img/map-mobile@2x.jpg" width="320" height="362">
+          <source media="(min-width: 769px)" srcset="./img/map-desktop@1.jpg" width="1440" height="400">
+          <source media="(min-width: 321px) and (max-width: 768px)" srcset="./img/map-tablet@1.jpg" width="768" height="400">
+          <img class="map__image" src="./img/map-mobile@1.jpg" srcset="" alt="Карта Санкт-Петербурга с отметкой на нашем офисе." width="320" height="362" loading="lazy">
         </picture>
       </div>
     </section>
@@ -164,10 +150,10 @@
   <footer class="page-footer">
     <div class="page__centerer">
       <div class="page-footer__container">
-        <a class="page-footer__logo link" href="#">
-          <img class="logo" src="" alt="Логотип интернет-магазина Кэт энерджи." width="128" height="24">
+        <a class="page-footer__logo" href="#">
+          <img class="logo" src="./img/logo.svg" alt="Логотип интернет-магазина Кэт энерджи." width="128" height="24">
         </a>
-        <ul class="page-footer__social-list list">
+        <ul class="page-footer__social-list">
           <li class="page-footer__social-item">
             <a class="page-footer__social-link page-footer__social-link--vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Кэт энерджи ВКонтакте.</span>
@@ -186,7 +172,7 @@
         </ul>
         <div class="page-footer__copyright copyright">
           <span class="visually-hidden">Ссылка на интенсив по адаптивной верстке htmlacademy.</span>
-          <a class="copyright__link link" href="https://htmlacademy.ru/intensive/adaptive" lang="en">HTML Academy
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" lang="en">HTML Academy
             <svg class="copyright__link-icon" width="27" height="34">
               <use href="./img/stack.svg#htmlacademy"></use>
             </svg>

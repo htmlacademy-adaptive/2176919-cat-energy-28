@@ -4,17 +4,85 @@
   color: var(--additional-color);
 }
 
+.program__container {
+  padding: 27px 0 32px 0;
+
+  @media #{$not-mobile} {
+    padding: 50px 0 72px 0;
+  }
+}
+
 .program__description {
   color: var(--main-color);
+  margin: 0 0 17px 0;
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+.program__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--gap);
+
+  @media #{$not-mobile} {
+    --gap: 65px;
+  }
+
+  @media #{$desktop-only} {
+    --gap: 67px 80px;
+    flex-direction: row;
+  }
 }
 
 .program__group {
   border: none;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 22px 0 24px 0;
+
+  @media #{$desktop-only} {
+    width: 100%;
+
+    &--questionnaire,
+    &--radio {
+      width: 46%;
+      flex-grow: 1;
+    }
+  }
+}
+
+.program__group--radio {
+  --color: #e7e7e7;
+  padding-bottom: 19px;
+  padding-left: 12px;
+
+  @media #{$not-mobile} {
+    border: solid 1px var(--color);
+  }
+}
+
+.program__group--comment {
+  padding: 0 0 23px 0;
+
+  .program__title {
+    margin-bottom: 38px;
+  }
+}
+
+.program__list {
+  @include reset-list;
+  margin: 0;
 }
 
 .program__list-input {
+  @include reset-list;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -22,7 +90,16 @@
 
   &--radio {
     align-items: flex-start;
-    gap: 13px;
+    gap: 30px;
+  }
+
+  @media #{$desktop-only} {
+    &--icon {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 78px;
+    }
   }
 }
 
@@ -30,20 +107,127 @@
   width: 100%;
   display: flex;
   align-items: center;
+
+  @media #{$desktop-only} {
+    &--email,
+    &--telephone {
+      width: 46%;
+      flex-grow: 1;
+    }
+  }
 }
 
 .program__label-input {
   flex-shrink: 0;
   margin-right: 13px;
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 1.48;
+  }
 }
 
 .program__input {
   width: 100%;
 }
 
+.program__input-control {
+  margin-right: 26px;
+}
+
 .program__remark {
+  @include text;
   font-family: var(--main-font);
-  font-size: 14px;
-  line-height: 1.14;
   text-transform: none;
+
+  @media #{$mobile-only} {
+    --line: 1.14;
+  }
+
+  @media #{$not-mobile} {
+    --size: 16px;
+    --line: 1;
+  }
+}
+
+.program__title {
+  @include title;
+  --size: 24px;
+  --line: 1.08;
+  text-transform: none;
+  margin-bottom: 15px;
+
+  @media #{$not-mobile} {
+    --size: 36px;
+    --line: 1;
+    margin-bottom: 54px;
+  }
+}
+
+.program__button {
+  @include button;
+
+  @media #{$mobile-only} {
+    width: 100%;
+  }
+
+  @media #{$not-mobile} {
+    --size: 20px;
+    padding: 13px 45px;
+  }
+
+  @media #{$desktop-only} {
+    width: 568px;
+  }
+}
+
+.program__item-input--email,
+.program__item-input--telephone {
+  .input {
+    --color: #cdcdcd;
+  }
+}
+
+.program__group--additionally {
+  .program__title {
+    margin: 0;
+  }
+
+  .program__list {
+    --gap: 13px;
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(var(--column-count, 1), 1fr);
+
+    @media #{$not-mobile} {
+      --column-count: 2;
+      --gap: 25px;
+    }
+
+    @media #{$desktop-only} {
+      --column-count: 4;
+    }
+  }
+}
+
+.program__label {
+  display: flex;
+  align-items: center;
+}
+
+.program__item {
+  display: flex;
+  align-items: center;
+}
+
+.program__wrapper {
+  @media #{$not-mobile} {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+  }
+
+  @media #{$desktop-only} {
+    gap: 84px;
+  }
 }

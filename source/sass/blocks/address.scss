@@ -3,3 +3,13 @@
   line-height: 1.4;
   color: var(--additional-color);
 }
+
+.address__text {
+  display: block;
+
+  @media #{$not-mobile} {
+    &--city {
+      margin-top: 20px;
+    }
+  }
+}

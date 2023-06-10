@@ -1,27 +1,72 @@
 .additional-card {
+  padding: 12px 0 19px 0;
   --gap: 13px;
-  padding: 0;
   display: grid;
   gap: var(--gap);
-  grid-template-columns: repeat(var(--column-count, 2), 1fr);
+  grid-template-columns: 1fr 1fr;
+  border-top: solid 1px #cdcdcd;
+  border-bottom: solid 1px #cdcdcd;
 
   @media #{$not-mobile} {
     --column-count: 3;
+    --gap: 25px;
+    grid-template-columns: 3fr 1fr 0.5fr;
+    padding: 26px 38px 28px 38px;
   }
 
   @media #{$desktop-only} {
+    padding: 15px 0 17px 0;
     --column-count: 4;
+    --gap: 40px;
+    grid-template-columns: 1fr 1fr auto 1fr;
+    align-items: center;
   }
 }
 
 .additional-card__link {
-  grid-column: 1/-1;
+  @include link;
+
+  @media #{$mobile-only} {
+    grid-column: 1/-1;
+  }
 }
 
 .additional-card__title {
+  @include title;
+  margin: 0;
   color: #222222;
+  --size: 16px;
+  text-transform: uppercase;
+
+  @media #{$not-mobile} {
+    --size: 20px;
+  }
 }
 
 .additional-card__button {
+  @include button;
   grid-column: 1/-1;
+  margin-top: 2px;
+
+  @media #{$desktop-only} {
+    grid-column: -2/-1;
+    padding: 10px 26px 9px 26px;
+  }
+}
+
+.additional-card__units {
+  margin: 0;
+
+  @media #{$not-mobile} {
+    justify-self: flex-end;
+  }
+
+  @media #{$desktop-only} {
+    justify-self: start;
+  }
+}
+
+.additional-card__price {
+  margin: 0;
+  justify-self: end;
 }

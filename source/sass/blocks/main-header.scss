@@ -8,20 +8,28 @@
   align-items: center;
 
   @media #{$not-mobile} {
-    --column-count: 4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
 .main-header__logo {
+  @include img;
+  @include link;
+  justify-self: flex-start;
+
   @media #{$mobile-only} {
     display: contents;
   }
 }
 
 .main-header__logo-image {
-  justify-self: start;
+  @include img;
+  justify-self: flex-start;
 }
 
 .main-header__logo-world {
+  @include img;
   justify-self: center;
 }

@@ -2,11 +2,10 @@
 @import "./global/global.scss";
 @import "./global/fonts.scss";
 @import "./global/media.scss";
+@import "./global/mixins.scss";
 
 // стили блоков
 @import "./blocks/page.scss";
-@import "./blocks/link.scss";
-@import "./blocks/title.scss";
 @import "./blocks/input.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/logo.scss";
@@ -15,8 +14,6 @@
 @import "./blocks/main-index.scss";
 @import "./blocks/intro.scss";
 @import "./blocks/want.scss";
-@import "./blocks/list.scss";
-@import "./blocks/button.scss";
 @import "./blocks/idea.scss";
 @import "./blocks/slider.scss";
 @import "./blocks/map.scss";
@@ -25,10 +22,10 @@
 @import "./blocks/copyright.scss";
 @import "./blocks/form-index.scss";
 @import "./blocks/program.scss";
-@import "./blocks/control.scss";
 @import "./blocks/main-inner.scss";
 @import "./blocks/catalog-products.scss";
 @import "./blocks/product-card.scss";
 @import "./blocks/show.scss";
+@import "./blocks/additional.scss";
 @import "./blocks/additional-card.scss";
 @import "./blocks/special-offer.scss";

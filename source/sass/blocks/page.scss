@@ -1,16 +1,17 @@
 .page {
+  @include text;
   width: 100%;
   height: 100%;
-  font-family: var(--main-font);
-  font-size: 14px;
-  line-height: 1.3;
-  color: var(--main-color);
+  counter-reset: list-item;
+
+  @media #{$not-mobile} {
+    --size: 16px;
+  }
 }
 
 .page__body {
-  margin: 0;
+  margin: 0 auto;
   min-width: 320px;
-  max-width: 1440px;
   min-height: 100%;
   background-color: #ffffff;
   color: var(--main-color);

@@ -1,0 +1,55 @@
+@mixin reset-list {
+  padding: 0;
+  list-style: none;
+}
+
+@mixin img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@mixin button {
+  cursor: pointer;
+  border: none;
+  padding: 14px 26px;
+  font-family: var(--accent-font);
+  font-size: var(--size, inherit);
+  line-height: var(--line, inherit);
+  background-color: var(--accent-color);
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+}
+
+@mixin link {
+  display: block;
+  font-family: var(--accent-font);
+  font-size: var(--size);
+  line-height: var(--line);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+@mixin title {
+  --size: 36px;
+  --line: 1;
+  --weight: 400;
+  font-family: var(--accent-font);
+  font-size: var(--size);
+  line-height: var(--line);
+  color: var(--main-color);
+  font-weight: var(--weight);
+}
+
+@mixin text {
+  --size: 14px;
+  --line: 1.3;
+  --weight: 400;
+  font-family: var(--main-font);
+  font-size: var(--size);
+  line-height: var(--line);
+  color: var(--main-color);
+  font-weight: var(--weight);
+}

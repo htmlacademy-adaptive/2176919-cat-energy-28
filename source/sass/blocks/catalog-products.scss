@@ -1,5 +1,6 @@
 .catalog-products__list {
-  --gap: 1rem;
+  @include reset-list;
+  --gap: 0;
   padding: 0;
   display: grid;
   gap: var(--gap);
@@ -7,9 +8,22 @@
 
   @media #{$not-mobile} {
     --column-count: 2;
+    --gap: 60px;
   }
 
   @media #{$desktop-only} {
     --column-count: 4;
   }
+}
+
+.catalog-products__title {
+  @include title;
+
+  @media #{$not-mobile} {
+    --size: 60px;
+  }
+}
+
+.catalog-products__special-offer {
+  margin: 35px 0;
 }
