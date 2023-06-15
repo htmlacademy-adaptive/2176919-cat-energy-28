@@ -1,3 +1,14 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$not-mobile} {
+    justify-content: end;
+    gap: 27px;
+  }
+}
+
 .copyright__link {
   @include link;
   text-transform: none;

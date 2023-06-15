@@ -1,17 +1,14 @@
 // глобальные стили
 @import "./global/global.scss";
 @import "./global/fonts.scss";
-@import "./global/media.scss";
+@import "./global/variables.scss";
 @import "./global/mixins.scss";
 
 // стили блоков
 @import "./blocks/page.scss";
-@import "./blocks/input.scss";
 @import "./blocks/main-header.scss";
-@import "./blocks/logo.scss";
 @import "./blocks/main-navigation.scss";
 @import "./blocks/visually-hidden.scss";
-@import "./blocks/main-index.scss";
 @import "./blocks/intro.scss";
 @import "./blocks/want.scss";
 @import "./blocks/idea.scss";
@@ -20,7 +17,6 @@
 @import "./blocks/address.scss";
 @import "./blocks/page-footer.scss";
 @import "./blocks/copyright.scss";
-@import "./blocks/form-index.scss";
 @import "./blocks/program.scss";
 @import "./blocks/main-inner.scss";
 @import "./blocks/catalog-products.scss";

@@ -1,3 +1,7 @@
+.idea__container {
+  @include centerer;
+}
+
 .idea__list {
   @include reset-list;
   margin: 0;
@@ -45,13 +49,32 @@
     content: "";
     width: 60px;
     height: 60px;
-    background-color: var(--accent-color);
+    background-color: $green;
     flex-shrink: 0;
+    background-size: 32px 32px;
+    background-position: center;
+    background-repeat: no-repeat;
 
     @media #{$not-mobile} {
       width: 80px;
       height: 80px;
     }
+  }
+
+  &--leaf::before {
+    background-image: url("../img/stack.svg#leaf");
+  }
+
+  &--powder::before {
+    background-image: url("../img/stack.svg#powder");
+  }
+
+  &--eating::before {
+    background-image: url("../img/stack.svg#eating");
+  }
+
+  &--alarm::before {
+    background-image: url("../img/stack.svg#alarm");
   }
 
   @media #{$not-mobile} {
@@ -62,7 +85,7 @@
       top: -40px;
       right: 10px;
       content: counter(list-item);
-      font-family: var(--accent-font);
+      font-family: $accent-font;
       font-size: 280px;
       line-height: 1;
       color: #f2f2f2;

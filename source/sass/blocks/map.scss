@@ -11,6 +11,10 @@
 }
 
 .map__container {
+  @include centerer;
+}
+
+.map__text-wrapper {
   display: flex;
   --gap: 15px;
   gap: var(--gap);

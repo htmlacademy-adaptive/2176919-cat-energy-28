@@ -1,29 +1,37 @@
+.want__container {
+  @include centerer;
+}
+
 .want__list {
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: var(--gap, 20px);
+  gap: 20px;
   margin: 0;
 
   @media #{$not-mobile} {
-    --gap: 30px;
+    gap: 30px;
   }
 
   @media #{$desktop-only} {
-    --gap: 80px;
+    gap: 80px;
     flex-direction: row;
   }
 }
 
 .want__description {
-  color: var(--additional-color);
+  color: $dark-gray;
   margin-bottom: 38px;
+
+  @media #{$tablet-only} {
+    max-width: 340px;
+  }
 }
 
 .want__link {
   @include link;
-  font-family: var(--accent-font);
+  font-family: $accent-font;
   font-size: 16px;
   line-height: 1;
 
@@ -34,8 +42,9 @@
 }
 
 .want__item {
-  background-color: #f2f2f2;
-  padding: 30px 33px 18px 20px;
+  position: relative;
+  background-color: $gray;
+  padding: 6px 33px 18px 20px;
 
   @media #{$not-mobile} {
     padding: 77px 62px 53px 52px;
@@ -44,6 +53,78 @@
   @media #{$desktop-only} {
     max-width: 570px;
     padding: 41px 52px 59px 52px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 24px;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $green;
+
+    @media #{$mobile-only} {
+      left: 22px;
+    }
+
+    @media #{$tablet-only} {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      right: 62px;
+    }
+
+    @media #{$desktop-only} {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+
+    @media #{$mobile-only} {
+      left: 8px;
+    }
+
+    @media #{$tablet-only} {
+      width: 280px;
+      height: 280px;
+      top: 32px;
+      right: 26px;
+    }
+
+    @media #{$desktop-only} {
+      width: 140px;
+      height: 140px;
+      left: 32px;
+      top: 20px;
+    }
+  }
+
+  &:nth-child(odd)::after {
+    background-image: url("../img/stack.svg#cat-sitting");
+  }
+
+  &:nth-child(even)::after {
+    top: 13px;
+    background-image: url("../img/stack.svg#cat-walking");
+
+    @media #{$tablet-only} {
+      top: 44px;
+    }
+
+    @media #{$desktop-only} {
+      top: 28px;
+    }
   }
 }
 
@@ -55,5 +136,11 @@
   @media #{$mobile-only} {
     --size: 24px;
     --line: 1.5;
+    padding-left: 91px;
+  }
+
+  @media #{$desktop-only} {
+    padding-left: 155px;
+    margin-bottom: 73px;
   }
 }

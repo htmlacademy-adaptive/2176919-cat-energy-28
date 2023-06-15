@@ -10,11 +10,10 @@
 }
 
 .page__body {
-  margin: 0 auto;
   min-width: 320px;
   min-height: 100%;
   background-color: #ffffff;
-  color: var(--main-color);
+  color: $black;
 }
 
 .page__centerer {

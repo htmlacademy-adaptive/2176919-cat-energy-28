@@ -1,10 +1,11 @@
 .program {
-  font-family: var(--accent-font);
+  font-family: $accent-font;
   text-transform: uppercase;
-  color: var(--additional-color);
+  color: $dark-gray;
 }
 
 .program__container {
+  @include centerer;
   padding: 27px 0 32px 0;
 
   @media #{$not-mobile} {
@@ -12,13 +13,26 @@
   }
 }
 
+.program__title-main {
+  @include title;
+  text-transform: none;
+  margin: 0 0 37px 0;
+
+  @media #{$not-mobile} {
+    margin-bottom: 54px;
+    --size: 60px;
+  }
+}
+
 .program__description {
-  color: var(--main-color);
+  color: $black;
   margin: 0 0 17px 0;
+  max-width: 226px;
 
   @media #{$not-mobile} {
     font-size: 20px;
     line-height: 1.5;
+    max-width: 323px;
   }
 }
 
@@ -51,19 +65,9 @@
 
     &--questionnaire,
     &--radio {
-      width: 46%;
+      width: calc((100% - 80px) / 2);
       flex-grow: 1;
     }
-  }
-}
-
-.program__group--radio {
-  --color: #e7e7e7;
-  padding-bottom: 19px;
-  padding-left: 12px;
-
-  @media #{$not-mobile} {
-    border: solid 1px var(--color);
   }
 }
 
@@ -87,20 +91,6 @@
   flex-direction: column;
   gap: 14px;
   align-items: flex-end;
-
-  &--radio {
-    align-items: flex-start;
-    gap: 30px;
-  }
-
-  @media #{$desktop-only} {
-    &--icon {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 78px;
-    }
-  }
 }
 
 .program__item-input {
@@ -111,15 +101,17 @@
   @media #{$desktop-only} {
     &--email,
     &--telephone {
-      width: 46%;
+      width: calc((100% - 78px) / 2);
       flex-grow: 1;
     }
   }
 }
 
 .program__label-input {
-  flex-shrink: 0;
-  margin-right: 13px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 13px;
 
   @media #{$not-mobile} {
     font-size: 20px;
@@ -128,16 +120,18 @@
 }
 
 .program__input {
+  @include input;
   width: 100%;
 }
 
 .program__input-control {
+  @include input;
   margin-right: 26px;
 }
 
 .program__remark {
   @include text;
-  font-family: var(--main-font);
+  font-family: $main-font;
   text-transform: none;
 
   @media #{$mobile-only} {
@@ -208,6 +202,28 @@
       --column-count: 4;
     }
   }
+
+  .program__input-control {
+    --color: #cdcdcd;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    border: solid 1px var(--color);
+    transition-duration: 140ms;
+    transition-timing-function: ease-in-out;
+    flex-shrink: 0;
+
+    &:checked::before {
+      content: "";
+      width: 18px;
+      height: 14px;
+      background-image: url("../img/stack.svg#mark");
+    }
+  }
 }
 
 .program__label {
@@ -229,5 +245,67 @@
 
   @media #{$desktop-only} {
     gap: 84px;
+  }
+}
+
+.program__group--contacts {
+  .program__list-input {
+    @media #{$desktop-only} {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 78px;
+    }
+  }
+}
+
+.program__textarea {
+  @include input;
+  resize: none;
+  padding: 9px 12px 9px 15px;
+  height: 150px;
+  border: solid 1px var(--color);
+}
+
+.program__group--radio {
+  --color: #e7e7e7;
+  padding-bottom: 19px;
+  padding-left: 12px;
+
+  @media #{$not-mobile} {
+    border: solid 1px var(--color);
+  }
+
+  .program__list-input {
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .program__input-control {
+    @include input;
+    --color: #cdcdcd;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    border-radius: 50%;
+    border: solid 1px transparent;
+    outline: solid 1px var(--color);
+    outline-offset: 11px;
+    transition-duration: 140ms;
+    transition-timing-function: ease-in-out;
+    flex-shrink: 0;
+
+    @media #{$not-mobile} {
+      padding: 0;
+    }
+
+    &:checked {
+      background-color: $green;
+    }
+
+    &:focus-visible {
+      outline: solid 2px #000000;
+    }
   }
 }

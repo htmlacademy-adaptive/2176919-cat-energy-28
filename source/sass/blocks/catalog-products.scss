@@ -1,3 +1,7 @@
+.catalog-products__container {
+  @include centerer;
+}
+
 .catalog-products__list {
   @include reset-list;
   --gap: 0;
@@ -21,6 +25,7 @@
 
   @media #{$not-mobile} {
     --size: 60px;
+    margin-bottom: 90px;
   }
 }
 

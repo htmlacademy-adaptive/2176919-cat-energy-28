@@ -7,3 +7,12 @@ $tablet-only: "(min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-
 $desktop-only: "(min-width: #{$breakpoint-desktop})";
 $not-mobile: "(min-width: #{$breakpoint-tablet})";
 $not-desktop: "(max-width: #{$breakpoint-desktop - $breakpoint-gap})";
+
+$main-font: "Lato", "Arial", sans-serif;
+$accent-font: "Oswald", "Arial", sans-serif;
+
+$gray: #f2f2f2;
+$additional-gray: #eaeaea;
+$green: #68b738;
+$black: #000000;
+$dark-gray: #444444;
