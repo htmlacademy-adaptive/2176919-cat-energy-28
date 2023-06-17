@@ -97,14 +97,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-
-  @media #{$desktop-only} {
-    &--email,
-    &--telephone {
-      width: calc((100% - 78px) / 2);
-      flex-grow: 1;
-    }
-  }
 }
 
 .program__label-input {
@@ -146,10 +138,13 @@
 
 .program__title {
   @include title;
+  @include green-stripes;
+  position: relative;
   --size: 24px;
   --line: 1.08;
   text-transform: none;
   margin-bottom: 15px;
+  width: fit-content;
 
   @media #{$not-mobile} {
     --size: 36px;
@@ -175,11 +170,8 @@
   }
 }
 
-.program__item-input--email,
-.program__item-input--telephone {
-  .input {
-    --color: #cdcdcd;
-  }
+.input {
+  --color: #cdcdcd;
 }
 
 .program__group--additionally {
@@ -256,6 +248,36 @@
       flex-direction: row;
       gap: 78px;
     }
+  }
+
+  .program__item-input {
+    @media #{$desktop-only} {
+      width: calc((100% - 78px) / 2);
+      flex-grow: 1;
+    }
+
+    &::after {
+      position: relative;
+      content: "";
+      width: 20px;
+      height: 20px;
+      right: 38px;
+      background-repeat: no-repeat;
+      background-position: center;
+      align-self: center;
+    }
+  }
+}
+
+.program__item-input--email {
+  &::after {
+    background-image: url("../img/stack.svg#email");
+  }
+}
+
+.program__item-input--telephone {
+  &::after {
+    background-image: url("../img/stack.svg#phone");
   }
 }
 

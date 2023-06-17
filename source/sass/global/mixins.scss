@@ -12,7 +12,7 @@
 @mixin button {
   cursor: pointer;
   border: none;
-  padding: 14px 26px;
+  padding: 14px;
   font-family: $accent-font;
   font-size: var(--size, inherit);
   line-height: var(--line, inherit);
@@ -91,5 +91,38 @@
     font-size: 20px;
     line-height: 1.5;
     padding: 10px 20px;
+  }
+}
+
+@mixin green-stripes {
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $green;
+    width: 100vw;
+    height: 2px;
+    top: calc(var(--size) / 2 * var(--line) + 2px);
+    right: 0;
+    box-shadow: 100vw 0 $green;
+    z-index: -1;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 21px * 2);
+    height: calc(var(--size) * var(--line));
+    background-color: #ffffff;
+    top: 0;
+    left: -37px;
+    z-index: -1;
+
+    @media #{$not-mobile} {
+      width: calc(100% + 36px * 2);
+    }
+
+    @media #{$desktop-only} {
+      left: -40px;
+    }
   }
 }

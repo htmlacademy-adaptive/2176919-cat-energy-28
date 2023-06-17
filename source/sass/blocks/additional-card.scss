@@ -57,7 +57,7 @@
   margin: 0;
 
   @media #{$not-mobile} {
-    justify-self: flex-end;
+    justify-self: end;
   }
 
   @media #{$desktop-only} {

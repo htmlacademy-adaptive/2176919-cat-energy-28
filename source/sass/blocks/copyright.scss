@@ -4,7 +4,7 @@
   align-items: center;
 
   @media #{$not-mobile} {
-    justify-content: end;
+    justify-content: flex-end;
     gap: 27px;
   }
 }
