@@ -4,15 +4,13 @@
 
 .catalog-products__list {
   @include reset-list;
-  --gap: 0;
   padding: 0;
   display: grid;
-  gap: var(--gap);
   grid-template-columns: repeat(var(--column-count, 1), 1fr);
 
   @media #{$not-mobile} {
     --column-count: 2;
-    --gap: 60px;
+    gap: 60px;
   }
 
   @media #{$desktop-only} {

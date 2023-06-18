@@ -40,14 +40,13 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: var(--gap);
 
   @media #{$not-mobile} {
-    --gap: 65px;
+    gap: 65px;
   }
 
   @media #{$desktop-only} {
-    --gap: 67px 80px;
+    gap: 67px 80px;
     flex-direction: row;
   }
 }
@@ -180,14 +179,13 @@
   }
 
   .program__list {
-    --gap: 13px;
     display: grid;
-    gap: var(--gap);
+    gap: 13px;
     grid-template-columns: repeat(var(--column-count, 1), 1fr);
 
     @media #{$not-mobile} {
       --column-count: 2;
-      --gap: 25px;
+      gap: 25px;
     }
 
     @media #{$desktop-only} {

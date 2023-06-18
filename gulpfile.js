@@ -88,9 +88,12 @@ const makeStack = () => {
 
 // Copy
 
-const copy = (done) => {
+export const copy = (done) => {
   gulp.src([
   'source/fonts/**/*.{woff2,woff}',
+  'source/img/favicons/*.*',
+  'source/*.ico',
+  'source/manifest.webmanifest',
   ], {
   base: 'source'
   })

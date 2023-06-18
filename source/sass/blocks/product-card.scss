@@ -1,15 +1,14 @@
 .product-card {
-  --gap: 13px;
   padding: 19px 0 25px 0;
   display: grid;
-  gap: var(--gap);
+  gap: 13px;
   grid-template-columns: repeat(var(--column-count, 2), 1fr);
 
   @media #{$not-mobile} {
     --column-count: 1;
     align-items: end;
     padding: 8px 37px 39px 39px;
-    --gap: 34px;
+    gap: 34px;
     position: relative;
 
     &::before {

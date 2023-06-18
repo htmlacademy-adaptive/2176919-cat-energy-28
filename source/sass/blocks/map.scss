@@ -16,14 +16,13 @@
 
 .map__text-wrapper {
   display: flex;
-  --gap: 15px;
-  gap: var(--gap);
+  gap: 15px;
   padding: 26px 0;
   align-items: flex-start;
   justify-content: space-between;
 
   @media #{$not-mobile} {
-    --gap: 296px;
+    gap: 296px;
     padding: 56px 40px;
   }
 
@@ -32,7 +31,7 @@
     background-color: #ffffff;
     top: 95px;
     padding: 58px 60px 55px 80px;
-    --gap: 114px;
+    gap: 114px;
   }
 }
 

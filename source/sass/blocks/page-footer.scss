@@ -7,9 +7,8 @@
 .page-footer__container {
   @include centerer;
   padding: 20px 0 40px 0;
-  --gap: 13px;
   display: grid;
-  gap: var(--gap);
+  gap: 13px;
   grid-template-columns: repeat(var(--column-count, 1), 1fr);
 
   @media #{$not-mobile} {
