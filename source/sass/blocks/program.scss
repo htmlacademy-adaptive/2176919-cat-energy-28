@@ -103,6 +103,7 @@
   align-items: center;
   flex: 1;
   gap: 13px;
+  cursor: pointer;
 
   @media #{$not-mobile} {
     font-size: 20px;
@@ -117,6 +118,7 @@
 
 .program__input-control {
   @include input;
+  cursor: pointer;
   margin-right: 26px;
 }
 
