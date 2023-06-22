@@ -190,8 +190,8 @@
   }
 
   @media #{$mobile-only} {
-    position: relative;
     @include gray-stripes;
+    position: relative;
   }
 
   .program__list {
@@ -278,12 +278,12 @@
 
 .program__group--contacts {
   @media #{$mobile-only} {
-    position: relative;
     @include gray-stripes;
+    position: relative;
     padding: 26px 0 4px 0;
 
     .program__title {
-      width:187px;
+      width: 187px;
       margin-bottom: 35px;
     }
   }
@@ -352,8 +352,8 @@
   padding: 28px 12px 12px 0;
 
   @media #{$mobile-only} {
-    position: relative;
     @include gray-stripes;
+    position: relative;
   }
 
   @media #{$not-mobile} {

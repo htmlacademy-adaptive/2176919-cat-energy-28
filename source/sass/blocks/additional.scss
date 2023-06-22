@@ -2,8 +2,8 @@
   padding-top: 25px;
 
   @media #{$mobile-only} {
-    position: relative;
     @include gray-stripes;
+    position: relative;
   }
 
   @media #{$desktop-only} {

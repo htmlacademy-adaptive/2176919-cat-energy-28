@@ -202,10 +202,10 @@
 
     .slider__button {
       border-color: $green;
+    }
 
-      &::before {
-        background-color: $green;
-      }
+    .slider__button::before {
+      background-color: $green;
     }
   }
 
@@ -214,10 +214,10 @@
 
     .slider__button {
       border-color: rgba(94, 170, 47, 0.6);
+    }
 
-      &::before {
-        background-color: rgba(94, 170, 47, 0.6);
-      }
+    .slider__button&::before {
+      background-color: rgba(94, 170, 47, 0.6);
     }
   }
 }
@@ -233,7 +233,7 @@
   border: solid 2px #666666;
   background-color: #ffffff;
 
-   &::before {
+  &::before {
     position: absolute;
     content: "";
     top: 50%;

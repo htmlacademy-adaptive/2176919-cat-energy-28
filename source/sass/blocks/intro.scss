@@ -23,7 +23,6 @@
   }
 
   @media #{$desktop-only} {
-
     &::after {
       content: "";
       position: absolute;

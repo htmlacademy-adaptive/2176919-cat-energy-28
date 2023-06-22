@@ -5,8 +5,8 @@
   grid-template-columns: repeat(var(--column-count, 2), 1fr);
 
   @media #{$mobile-only} {
-    position: relative;
     @include gray-stripes;
+    position: relative;
   }
 
   @media #{$not-mobile} {
