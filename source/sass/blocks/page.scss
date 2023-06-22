@@ -10,21 +10,7 @@
 }
 
 .page__body {
+  margin: 0;
   min-width: 320px;
   min-height: 100%;
-  background-color: #ffffff;
-  color: $black;
-}
-
-.page__centerer {
-  margin-inline: 20px;
-
-  @media #{$not-mobile} {
-    margin-inline: 30px;
-  }
-
-  @media #{$desktop-only} {
-    inline-size: 1220px;
-    margin-inline: auto;
-  }
 }

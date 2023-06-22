@@ -1,3 +1,9 @@
+.main-header--inner {
+  @media #{$mobile-only} {
+    border-bottom: solid 1px #d9d9d9;
+  }
+}
+
 .main-header__container {
   @include centerer;
   padding: 0 0 5px 0;
@@ -19,6 +25,14 @@
 .main-header__logo-image {
   @include img;
   justify-self: flex-start;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-header__container--nojs {
@@ -32,6 +46,29 @@
 
     .main-navigation {
       position: static;
+      display: block;
     }
+
+    .main-header__logo {
+      align-self: flex-start;
+    }
+  }
+}
+
+.main-header__toggle-navigation {
+  cursor: pointer;
+  position: relative;
+  display: none;
+
+  @media #{$mobile-only} {
+    @include shape;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 24px;
+    height: 16px;
+    background-color: #ffffff;
+    border: none;
   }
 }

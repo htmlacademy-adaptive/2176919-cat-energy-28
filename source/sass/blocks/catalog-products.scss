@@ -4,6 +4,7 @@
 
 .catalog-products__list {
   @include reset-list;
+  margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(var(--column-count, 1), 1fr);
@@ -11,10 +12,12 @@
   @media #{$not-mobile} {
     --column-count: 2;
     gap: 60px;
+    align-items: start;
   }
 
   @media #{$desktop-only} {
     --column-count: 4;
+    gap: 80px;
   }
 }
 

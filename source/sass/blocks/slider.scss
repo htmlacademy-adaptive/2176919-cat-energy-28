@@ -66,10 +66,10 @@
   padding: 0;
   display: grid;
   gap: 32px;
-  grid-template-columns: repeat(var(--column-count, 2), 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   @media #{$not-mobile} {
-    --column-count: 3;
+    grid-template-columns: 162px 162px 1fr;
     margin-bottom: 99px;
   }
 
@@ -81,12 +81,12 @@
 }
 
 .slider__outlay-meaning {
+  padding: 14px 20px 27px 20px;
   font-family: $accent-font;
   font-size: 24px;
   line-height: 1;
   order: -1;
-  margin: 0 0 15px 0;
-  padding: 15px 43px 18px 43px;
+  margin: 0;
   text-align: center;
 
   @media #{$not-mobile} {
@@ -96,21 +96,23 @@
 }
 
 .slider__outlay-characteristic {
+  position: absolute;
+  display: block;
   color: $dark-gray;
   font-size: 12px;
   line-height: 1;
   text-align: center;
   width: 87px;
-  height: 30px;
   background-color: $additional-gray;
-  margin: -20px auto;
-  padding: 1px 4px;
+  padding: 14px 4px;
+  bottom: 0;
+  transform: translateY(50%);
 
   @media #{$not-mobile} {
     font-size: 14px;
     background-color: #ffffff;
     width: auto;
-    padding: 1px 10px 0 8px;
+    padding: 14px 10px 14px 8px;
   }
 
   @media #{$desktop-only} {
@@ -119,7 +121,10 @@
 }
 
 .slider__characteristic {
+  position: relative;
+  align-self: start;
   display: flex;
+  align-items: center;
   flex-direction: column;
   border: solid 1px #cdcdcd;
   border-radius: 3px;
@@ -132,14 +137,6 @@
   grid-column: 1/-1;
   flex-direction: row;
   justify-content: center;
-
-  .outlay__meaning {
-    margin-left: 4px;
-
-    @media #{$desktop-only} {
-      margin-left: 63px;
-    }
-  }
 
   @media #{$not-mobile} {
     text-align: right;
@@ -192,12 +189,36 @@
 .slider__control {
   position: relative;
   width: 4px;
-  height: 256px;
+  height: 100%;
   background-color: #666666;
   border-radius: 2px;
 
   @media #{$not-mobile} {
     height: 512px;
+  }
+
+  &:hover {
+    background-color: $green;
+
+    .slider__button {
+      border-color: $green;
+
+      &::before {
+        background-color: $green;
+      }
+    }
+  }
+
+  &:active {
+    background-color: rgba(94, 170, 47, 0.6);
+
+    .slider__button {
+      border-color: rgba(94, 170, 47, 0.6);
+
+      &::before {
+        background-color: rgba(94, 170, 47, 0.6);
+      }
+    }
   }
 }
 
@@ -210,8 +231,21 @@
   height: 40px;
   border-radius: 50%;
   border: solid 2px #666666;
-  background-image: url("../img/stack.svg#slider-arrow");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 24px 18px;
+  background-color: #ffffff;
+
+   &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-color: #666666;
+    border-radius: 50%;
+    mask-image: url("../img/stack.svg#slider-arrow");
+    mask-size: 24px 18px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
 }

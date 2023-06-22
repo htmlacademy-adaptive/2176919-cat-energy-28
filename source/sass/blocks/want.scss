@@ -22,7 +22,12 @@
 
 .want__description {
   color: $dark-gray;
-  margin-bottom: 38px;
+  margin-bottom: 19px;
+  padding-bottom: 23px;
+
+  @media #{$mobile-only} {
+    border-bottom: solid 1px #d9d9d9;
+  }
 
   @media #{$tablet-only} {
     max-width: 340px;
@@ -31,6 +36,8 @@
 
 .want__link {
   @include link;
+  display: flex;
+  align-items: center;
   font-family: $accent-font;
   font-size: 16px;
   line-height: 1;
@@ -38,6 +45,37 @@
   @media #{$not-mobile} {
     font-size: 20px;
     line-height: 1.48;
+  }
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background-color: $black;
+    order: 1;
+    margin-left: 15px;
+
+    @media #{$not-mobile} {
+      margin-left: 25px;
+    }
+  }
+
+  &::after {
+    content: "";
+    border: 9px solid #000000;
+    border-right-width: 0;
+    border-left-color: #000000;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    order: 2;
+  }
+
+  &:hover::before {
+    width: 26px;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

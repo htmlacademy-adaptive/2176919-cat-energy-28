@@ -117,7 +117,7 @@
           </dl>
         </div>
         <div class="slider__image-wrapper">
-          <div>
+          <div class="slider__item">
             <picture>
               <source media="(min-width: 768px)" srcset="./img/fat-cat-tablet@1.png 1x, ./img/fat-cat-tablet@2x.png 2x" width="560" height="512">
               <img class="slider__image slider__image--state-before" src="./img/fat-cat-mobile@1.png" srcset="./img/fat-cat-mobile@2x.png 2x" alt="Борис до похудения." width="280" height="256">
@@ -128,10 +128,10 @@
               <span class="visually-hidden">Ползунок слайдера</span>
             </button>
           </div>
-          <div>
+          <div class="slider__item">
             <picture>
               <source media="(min-width: 768px)" srcset="./img/cat-thin-tablet@1.png 1x, ./img/cat-thin-tablet@2x.png 2x" width="560" height="512">
-              <img class="slider__image slider__image--state-after" src="./img/cat-thin-mobile@1.png" srcset="./img/thin-cat-mobile@2x.png 2x" alt="Борис после похудения." width="280" height="256">
+              <img class="slider__image slider__image--state-after" src="./img/cat-thin-mobile@1.png" srcset="./img/cat-thin-mobile@2x.png 2x" alt="Борис после похудения." width="280" height="256">
             </picture>
           </div>
         </div>
@@ -159,36 +159,44 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__container">
-      <a class="page-footer__logo" href="#">
-        <picture>
-          <source media="(min-width: 768px)" srcset="./img/logo.svg#footer-logo-tablet" width="143" height="27">
-          <img class="page-footer__logo-image" src="./img/logo.svg#footer-logo-mobile" alt="Логотип интернет-магазина Кэт энерджи." width="210" height="60">
-        </picture>
+      <a class="page-footer__logo" href="index.html">
+        <span class="visually-hidden">Логотип интернет-магазина Кэт энерджи.</span>
+        <svg class="page-footer__logo-image" width="143" height="27">
+          <use href="./img/logo.svg#footer-logo"></use>
+        </svg>
       </a>
       <ul class="page-footer__social-list">
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="https://vk.com/htmlacademy">
-            <img class="page-footer__social-image" src="./img/stack.svg#vkontakte" width="29" height="22" alt="Кэт энерджи ВКонтакте.">
+            <span class="visually-hidden">Кэт энерджи ВКонтакте.</span>
+            <svg class="page-footer__social-image" width="29" height="22">
+              <use href="./img/stack.svg#vkontakte"></use>
+            </svg>
           </a>
         </li>
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="https://www.youtube.com/user/htmlacademyru">
-            <img class="page-footer__social-image" src="./img/stack.svg#youtube" width="29" height="22" alt="Кэт энерджи на YouTube.">
+            <span class="visually-hidden">Кэт энерджи на YouTube.</span>
+            <svg class="page-footer__social-image" width="29" height="22">
+              <use href="./img/stack.svg#youtube"></use>
+            </svg>
           </a>
         </li>
         <li class="page-footer__social-item">
           <a class="page-footer__social-link" href="https://t.me/htmlacademy">
-            <img class="page-footer__social-image" src="./img/stack.svg#telegram" width="29" height="22" alt="Кэт энерджи в Телеграм.">
+            <span class="visually-hidden">Кэт энерджи в Телеграм.</span>
+            <svg class="page-footer__social-image" width="29" height="22">
+              <use href="./img/stack.svg#telegram"></use>
+            </svg>
           </a>
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
         <span class="visually-hidden">Ссылка на интенсив по адаптивной верстке htmlacademy.</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" lang="en">HTML Academy
-        </a>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" lang="en">
+          <span class="copyright__link-text">HTML Academy</span>
           <svg class="copyright__link-icon" width="27" height="34">
-            <use href="./img/logo.svg#academy-logo"></use>
+            <use href="./img/stack.svg#academy-logo"></use>
           </svg>
         </a>
       </div>

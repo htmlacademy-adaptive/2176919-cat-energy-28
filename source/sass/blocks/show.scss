@@ -1,27 +1,42 @@
 .show {
-  padding: 39px 0 25px 0;
+  position: relative;
+  padding: 78px 0 25px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  text-align: center;
+  align-self: flex-end;
 
-  &::before,
   &::after {
+    position: absolute;
     content: "";
+    top: 25px;
     width: 30px;
-    height: 2px;
-    background-color: #d3d3d3;
-    order: -1;
-  }
+    height: 30px;
+    background-image: url("../img/stack.svg#catalog-cross");
+    background-repeat: no-repeat;
+    background-position: center;
 
-  &::before {
-    transform: rotate(90deg);
+
+    @media #{$not-mobile} {
+      width: 60px;
+      height: 60px;
+      top: 52px;
+    }
   }
 
   @media #{$not-mobile} {
-    margin-top: 80px;
-    padding: 84px 37px 38px 38px;
+    padding: 161px 37px 38px 38px;
     border: solid 2px $gray;
+  }
+
+  @media #{$mobile-only} {
+    @include gray-stripes;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -32,19 +47,19 @@
   text-transform: uppercase;
   position: relative;
   color: #111111;
-  margin: 37px 0 8px 0;
+  margin: 0 0 8px 0;
 
   @media #{$not-mobile} {
     --size: 20px;
     --line: 1.1;
-    margin: 79px 0 23px 0;
+    margin-bottom: 23px;
   }
 }
 
 .show__description {
   @include text;
   --size: 12px;
-  margin-bottom: 21px;
+  margin: 0 0 21px 0;
 
   @media #{$not-mobile} {
     --size: 16px;
@@ -63,4 +78,12 @@
   background-color: #f2f2f2;
   color: $dark-gray;
   text-align: center;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }

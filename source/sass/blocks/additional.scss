@@ -1,6 +1,11 @@
 .additional {
   padding-top: 25px;
 
+  @media #{$mobile-only} {
+    position: relative;
+    @include gray-stripes;
+  }
+
   @media #{$desktop-only} {
     --gap: 80px;
     display: grid;

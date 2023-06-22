@@ -6,14 +6,14 @@
 
 .page-footer__container {
   @include centerer;
-  padding: 20px 0 40px 0;
+  padding: 40px 0;
   display: grid;
   gap: 13px;
   grid-template-columns: repeat(var(--column-count, 1), 1fr);
+  justify-content: center;
 
   @media #{$not-mobile} {
     --column-count: 3;
-    justify-content: center;
   }
 }
 
@@ -35,11 +35,55 @@
 
 .page-footer__logo {
   @include link;
-  text-align: center;
-  margin-right: 80px;
   align-self: center;
+
+  &:focus {
+    .page-footer__logo-image {
+      color: #3e3e3e;
+    }
+  }
+
+  @media #{$mobile-only} {
+    justify-self: center;
+  }
 
   @media #{$not-mobile} {
     text-align: start;
   }
+}
+
+.page-footer__logo-image {
+  color: #111111;
+
+  &:hover {
+    color: #3e3e3e;
+  }
+
+  &:active {
+    color: #6b6b6b;
+  }
+
+  @media #{$mobile-only} {
+    width: 128px;
+  }
+}
+
+.page-footer__social-link {
+  color: #666666;
+
+  &:hover {
+    color: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    color: $green;
+  }
+}
+
+.page-footer__copyright {
+  align-self: center;
 }
