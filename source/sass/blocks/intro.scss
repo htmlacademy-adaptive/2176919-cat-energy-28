@@ -105,6 +105,10 @@
   @media #{$not-mobile} {
     --size: 20px;
   }
+
+  ~.intro__button {
+    margin-top: 8px;
+  }
 }
 
 .intro__image-wrapper {

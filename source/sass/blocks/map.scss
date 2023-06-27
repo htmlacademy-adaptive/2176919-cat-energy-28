@@ -16,6 +16,7 @@
 
 .map__text-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   padding: 26px 0;
   align-items: flex-start;

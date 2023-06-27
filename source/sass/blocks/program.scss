@@ -358,6 +358,7 @@
 
   @media #{$not-mobile} {
     border: solid 1px var(--color);
+    padding: 28px;
   }
 
   .program__list-input {

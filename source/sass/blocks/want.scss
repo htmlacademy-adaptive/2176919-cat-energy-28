@@ -77,6 +77,10 @@
   &:active {
     opacity: 0.3;
   }
+
+  ~.want__link {
+    margin-top: 8px;
+  }
 }
 
 .want__item {
