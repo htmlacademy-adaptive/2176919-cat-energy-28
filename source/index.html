@@ -66,7 +66,7 @@
         <ul class="want__list">
           <li class="want__item">
             <h3 class="want__title">Похудение</h3>
-            <p class="want__description">Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <p class="want__description">Ваш кот весит больше собаки и почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="want__link" href="#">Каталог slim</a>
           </li>
           <li class="want__item">
@@ -91,7 +91,7 @@
             <p class="idea__description">Замените один-два приема обычной еды на&nbsp;наше функциональное питание.</p>
           </li>
           <li class="idea__item idea__item--alarm">
-            <p class="idea__description">Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!</p>
+            <p class="idea__description">Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему <br>вашего питомца!</p>
           </li>
         </ol>
       </div>
@@ -100,7 +100,7 @@
       <div class="slider__container">
         <h2 class="slider__title">Живой пример</h2>
         <div class="slider__content">
-          <p class="slider__description">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
+          <p class="slider__description">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
           <dl class="slider__outlay outlay">
             <div class="slider__characteristic">
               <dt class="slider__outlay-characteristic">снижение веса</dt>
@@ -150,6 +150,9 @@
       </div>
       <div class="map__wrapper">
         <picture>
+          <source media="(min-width: 1440px)" srcset="./img/map-desktop@1.webp 1x, ./img/map-desktop@2x.webp 2x" width="1440" height="400">
+          <source media="(min-width: 768px)" srcset="./img/map-tablet@1.webp 1x, ./img/map-tablet@2x.webp 2x" width="768" height="400">
+          <source type="image/webp" srcset="./img/map-mobile@1.webp 1x, ./img/map-mobile@2x.webp 2x" width="320" height="362">
           <source media="(min-width: 1440px)" srcset="./img/map-desktop@1.jpg 1x, ./img/map-desktop@2x.jpg 2x" width="1440" height="400">
           <source media="(min-width: 768px)" srcset="./img/map-tablet@1.jpg 1x, ./img/map-tablet@2x.jpg 2x" width="768" height="400">
           <img class="map__image" src="./img/map-mobile@1.jpg" srcset="./img/map-mobile@2x.jpg 2x" alt="Карта Санкт-Петербурга с отметкой на нашем офисе." width="320" height="362" loading="lazy">
@@ -202,6 +205,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="./js/script.min.js"></script>
 </body>
 

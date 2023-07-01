@@ -12,7 +12,7 @@
 @mixin button {
   cursor: pointer;
   border: none;
-  padding: 14px;
+  padding: 11px;
   font-family: $accent-font;
   font-size: var(--size, inherit);
   line-height: var(--line, inherit);
@@ -87,7 +87,7 @@
 
 @mixin input {
   --color: #e7e7e7;
-  padding: 14px 20px 13px 20px;
+  padding: 14px 20px 12px 20px;
   font-family: $accent-font;
   font-size: 16px;
   line-height: 1.13;

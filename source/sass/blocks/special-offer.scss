@@ -29,9 +29,14 @@
     background-image: url("../img/stack.svg#gift");
 
     @media #{$tablet-only} {
-      top: 50%;
+      top: 49%;
       left: 77px;
       transform: translateY(-50%);
+    }
+
+    @media #{$desktop-only} {
+      top: 56px;
+      left: 51%;
     }
   }
 
@@ -67,8 +72,9 @@
   z-index: 1;
   text-align: center;
 
-  @media #{$not-mobile} {
+  @media #{$tablet-only} {
     padding: 71px 124px 69px 422px;
+    text-align: left;
   }
 
   @media #{$desktop-only} {

@@ -2,12 +2,18 @@
   font-style: normal;
   line-height: 1.4;
   color: $dark-gray;
+
+  @media #{$tablet-only} {
+    text-align: right;
+  }
 }
 
 .address__text {
   display: block;
 
   @media #{$not-mobile} {
+   line-height: 1.25;
+
     &:last-child {
       margin-top: 20px;
     }

@@ -1,6 +1,6 @@
 .show {
   position: relative;
-  padding: 78px 0 25px 0;
+  padding: 81px 0 25px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,12 +22,12 @@
     @media #{$not-mobile} {
       width: 60px;
       height: 60px;
-      top: 52px;
+      top: 48px;
     }
   }
 
   @media #{$not-mobile} {
-    padding: 161px 37px 38px 38px;
+    padding: 159px 37px 38px 38px;
     border: solid 2px $gray;
   }
 
@@ -52,7 +52,11 @@
   @media #{$not-mobile} {
     --size: 20px;
     --line: 1.1;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 22px;
   }
 }
 

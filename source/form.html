@@ -15,7 +15,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header main-header--inner">
+  <header class="main-header main-header--inner main-header--form">
     <div class="main-header__container main-header__container--nojs">
       <a class="main-header__logo" href="index.html">
         <picture>
@@ -53,20 +53,20 @@
             <ul class="program__list-input">
               <li class="program__item-input">
                 <label class="program__label-input" for="cat-name">
-                  <span>Имя:*</span>
                   <input class="program__input" type="text" id="cat-name" name="cat-name" placeholder="Барсик" required>
+                  <span class="program__label-text">Имя:*</span>
                 </label>
               </li>
               <li class="program__item-input">
                 <label class="program__label-input" for="cat-weight">
-                  <span>Вес&nbsp;(кг):*</span>
                   <input class="program__input" type="text" id="cat-weight" name="cat-weight" placeholder="7" required>
+                  <span class="program__label-text">Вес&nbsp;(кг):*</span>
                 </label>
               </li>
               <li class="program__item-input">
                 <label class="program__label-input" for="cat-age">
-                  <span>Возраст&nbsp;(лет):</span>
                   <input class="program__input" type="text" id="cat-age" name="cat-age" placeholder="7">
+                  <span class="program__label-text">Возраст&nbsp;(лет):</span>
                 </label>
               </li>
             </ul>
@@ -77,19 +77,19 @@
               <li class="program__item">
                 <label class="program__label-input" for="weight-loss">
                   <input class="program__input-control" id="weight-loss" type="radio" name="program" value="weight-loss" checked>
-                  <span>Похудение</span>
+                  <span class="program__label-text">Похудение</span>
                 </label>
               </li>
               <li class="program__item">
                 <label class="program__label-input" for="mass-gain">
                   <input class="program__input-control" id="mass-gain" type="radio" name="program" value="mass-gain">
-                  <span>Набор массы</span>
+                  <span class="program__label-text">Набор массы</span>
                 </label>
               </li>
               <li class="program__item">
                 <label class="program__label-input" for="need-advice">
                   <input class="program__input-control" id="need-advice" type="radio" name="program" value="need-advice">
-                  <span>Не знаю (Нужен ваш совет)</span>
+                  <span class="program__label-text">Не знаю (Нужен ваш совет)</span>
                 </label>
               </li>
             </ul>
@@ -98,17 +98,17 @@
             <legend class="visually-hidden">Давайте познакомимся.</legend>
             <h2 class="program__title">Контактные данные (владельца кота)</h2>
             <ul class="program__list-input">
-              <li class="program__item-input program__item-input--email">
+              <li class="program__item-input program__item-input--icon program__item-input--email">
                 <label class="program__label-input" for="contacts-email">
-                  <span>E&#8209;mail:*</span>
                   <input class="program__input" type="email" id="contacts-email" name="contacts-email" placeholder="кuklachev@gmail.com" required>
+                  <span class="program__label-text">E&#8209;mail:*</span>
                 </label>
 
               </li>
-              <li class="program__item-input program__item-input--telephone">
+              <li class="program__item-input program__item-input--icon program__item-input--telephone">
                 <label class="program__label-input" for="contacts-telephone">
-                  <span>Телефон:*</span>
                   <input class="program__input" type="tel" id="contacts-telephone" name="contacts-telephone" placeholder="8 (960) 900-60-90" required>
+                  <span class="program__label-text">Телефон:*</span>
                 </label>
               </li>
             </ul>
@@ -124,25 +124,25 @@
               <li class="program__item">
                 <label class="program__label-input" for="sweetener">
                   <input class="program__input-control" id="sweetener" type="checkbox" name="additionally" value="sweetener" checked>
-                  <span>сахарозаменитель</span>
+                  <span class="program__label-text">сахарозаменитель</span>
                 </label>
               </li>
               <li class="program__item">
                 <label class="program__label-input" for="drinking-water">
                   <input class="program__input-control" id="drinking-water" type="checkbox" name="additionally" value="drinking-water">
-                  <span>питьевая вода</span>
+                  <span class="program__label-text">питьевая вода</span>
                 </label>
               </li>
               <li class="program__item">
                 <label class="program__label-input" for="milk">
                   <input class="program__input-control" id="milk" type="checkbox" name="additionally" value="milk">
-                  <span>молоко</span>
+                  <span class="program__label-text">молоко</span>
                 </label>
               </li>
               <li class="program__item">
                 <label class="program__label-input" for="vitamins">
                   <input class="program__input-control" id="vitamins" type="checkbox" name="additionally" value="vitamins">
-                  <span>витамины</span>
+                  <span class="program__label-text">витамины</span>
                 </label>
               </li>
             </ul>
@@ -167,6 +167,9 @@
       </div>
       <div class="map__wrapper">
         <picture>
+          <source media="(min-width: 1440px)" srcset="./img/map-desktop@1.webp 1x, ./img/map-desktop@2x.webp 2x" width="1440" height="400">
+          <source media="(min-width: 768px)" srcset="./img/map-tablet@1.webp 1x, ./img/map-tablet@2x.webp 2x" width="768" height="400">
+          <source type="image/webp" srcset="./img/map-mobile@1.webp 1x, ./img/map-mobile@2x.webp 2x" width="320" height="362">
           <source media="(min-width: 1440px)" srcset="./img/map-desktop@1.jpg 1x, ./img/map-desktop@2x.jpg 2x" width="1440" height="400">
           <source media="(min-width: 768px)" srcset="./img/map-tablet@1.jpg 1x, ./img/map-tablet@2x.jpg 2x" width="768" height="400">
           <img class="map__image" src="./img/map-mobile@1.jpg" srcset="./img/map-mobile@2x.jpg 2x" alt="Карта Санкт-Петербурга с отметкой на нашем офисе." width="320" height="362" loading="lazy">
@@ -219,6 +222,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="./js/script.min.js"></script>
 </body>
 

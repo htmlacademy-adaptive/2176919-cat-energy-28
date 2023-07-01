@@ -17,13 +17,14 @@
   @media #{$desktop-only} {
     gap: 80px;
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
 .want__description {
   color: $dark-gray;
-  margin-bottom: 19px;
-  padding-bottom: 23px;
+  margin-bottom: 17px;
+  padding-bottom: 21px;
 
   @media #{$mobile-only} {
     border-bottom: solid 1px #d9d9d9;
@@ -31,11 +32,21 @@
 
   @media #{$tablet-only} {
     max-width: 340px;
+    padding-bottom: 33px;
+  }
+
+  @media #{$not-mobile} {
+    line-height: 1.5;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 4px;
   }
 }
 
 .want__link {
   @include link;
+  padding: 3px 0;
   display: flex;
   align-items: center;
   font-family: $accent-font;
@@ -53,16 +64,16 @@
     height: 2px;
     background-color: $black;
     order: 1;
-    margin-left: 15px;
+    margin-left: 16px;
 
     @media #{$not-mobile} {
-      margin-left: 25px;
+      margin-left: 26px;
     }
   }
 
   &::after {
     content: "";
-    border: 9px solid #000000;
+    border: 7px solid #000000;
     border-right-width: 0;
     border-left-color: #000000;
     border-top-color: transparent;
@@ -86,15 +97,15 @@
 .want__item {
   position: relative;
   background-color: $gray;
-  padding: 6px 33px 18px 20px;
+  padding: 29px 20px 19px 20px;
 
   @media #{$not-mobile} {
-    padding: 77px 62px 53px 52px;
+    padding: 77px 62px 54px 53px;
   }
 
   @media #{$desktop-only} {
     max-width: 570px;
-    padding: 41px 52px 59px 52px;
+    padding: 77px 52px 55px 52px;
   }
 
   &::before {
@@ -113,8 +124,8 @@
     @media #{$tablet-only} {
       width: 200px;
       height: 200px;
-      top: 92px;
-      right: 62px;
+      top: 91px;
+      right: 61px;
     }
 
     @media #{$desktop-only} {
@@ -134,14 +145,14 @@
     background-repeat: no-repeat;
 
     @media #{$mobile-only} {
-      left: 8px;
+      left: 10px;
     }
 
     @media #{$tablet-only} {
       width: 280px;
       height: 280px;
-      top: 32px;
-      right: 26px;
+      top: 38px;
+      right: 22px;
     }
 
     @media #{$desktop-only} {
@@ -157,32 +168,38 @@
   }
 
   &:nth-child(even)::after {
-    top: 13px;
+    top: 11px;
     background-image: url("../img/stack.svg#cat-walking");
 
     @media #{$tablet-only} {
-      top: 44px;
+      top: 50px;
     }
 
     @media #{$desktop-only} {
-      top: 28px;
+      top: 25px;
+      left: 30px;
     }
   }
 }
 
 .want__title {
   @include title;
-  margin-bottom: 29px;
+  margin: 0 0 30px 0;
   text-transform: uppercase;
 
   @media #{$mobile-only} {
     --size: 24px;
     --line: 1.5;
-    padding-left: 91px;
+    padding-left: 70px;
+  }
+
+  @media #{$tablet-only} {
+    padding-right: 192px;
+    margin-bottom: 24px;
   }
 
   @media #{$desktop-only} {
-    padding-left: 155px;
+    padding-left: 162px;
     margin-bottom: 73px;
   }
 }

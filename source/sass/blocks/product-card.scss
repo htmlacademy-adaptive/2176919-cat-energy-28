@@ -1,7 +1,7 @@
 .product-card {
-  padding: 19px 0 25px 0;
+  padding: 20px 0 25px 0;
   display: grid;
-  gap: 13px;
+  row-gap: 7px;
   grid-template-columns: repeat(var(--column-count, 2), 1fr);
 
   @media #{$mobile-only} {
@@ -12,21 +12,28 @@
   @media #{$not-mobile} {
     --column-count: 1;
     align-items: end;
-    padding: 8px 37px 39px 39px;
-    gap: 34px;
+    padding: 8px 37px 40px 39px;
+    gap: 32px;
     position: relative;
     grid-template-rows: 200px auto;
-    background: linear-gradient(#ffffff 81px, $gray 81px);
+    background: linear-gradient(#ffffff 78px, $gray 78px);
   }
 
   @media #{$desktop-only} {
     grid-template-rows: 210px auto;
+    background: linear-gradient(#ffffff 98px, $gray 98px);
+  }
+}
+
+.product-card__wrapper {
+  @media #{$desktop-only} {
+    padding-top: 10px;
   }
 }
 
 .product-card__title {
   @include title;
-  margin: 0 0 18px 0;
+  margin: 0 0 16px 0;
   color: #222222;
   --size: 16px;
   --line: 1.25;
@@ -38,23 +45,51 @@
     --line: 1.2;
     text-align: center;
     margin: auto;
-    margin-bottom: 21px;
+    margin-bottom: 12px;
     max-width: 150px;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: 12px;
+    margin-bottom: 16px;
+    --line: 1.1;
   }
 }
 
 .product-card__characteristic-wrapper {
+  @include text;
+  --size: 12px;
   display: flex;
   justify-content: space-between;
 
   @media #{$not-mobile} {
-    padding: 7px 0 9px 0;
+    padding: 7px 0 8px 0;
     border-bottom: solid 1px #cdcdcd;
+    --size: 16px;
+    --line: 1;
+  }
+}
+
+.product-card__characteristics {
+  @media #{$not-mobile} {
+    margin: 0;
   }
 }
 
 .product-card__image {
   @include img;
+  width: 140px;
+  height: 112px;
+
+  @media #{$not-mobile} {
+    width: 168px;
+    height: 200px;
+  }
+
+  @media #{$desktop-only} {
+    width: 172px;
+    height: 196px;
+  }
 }
 
 .product-card__button {
@@ -72,12 +107,5 @@
 
   @media #{$mobile-only} {
     align-self: center;
-  }
-}
-
-.product-card__characteristic {
-  @media #{$mobile-only} {
-    @include text;
-    --size: 12px;
   }
 }

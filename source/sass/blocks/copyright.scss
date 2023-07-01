@@ -1,5 +1,6 @@
 .copyright__link {
   @include link;
+  padding-top: 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,4 +33,10 @@
 
 .copyright__link-icon {
   color: #444444;
+  margin-left: 20px;
+  flex-shrink: 0;
+
+  @media #{$not-mobile} {
+    margin-left: 0;
+  }
 }

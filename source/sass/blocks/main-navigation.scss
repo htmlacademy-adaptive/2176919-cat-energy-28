@@ -12,7 +12,7 @@
       width: 24px;
       height: 2px;
       background-color: #000000;
-      box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+      box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
     }
   }
 
@@ -34,7 +34,7 @@
         &::after {
           content: "";
           right: 0;
-          top: 0;
+          top: 50%;
           position: absolute;
           width: 25px;
           height: 2px;
@@ -69,8 +69,13 @@
     top: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    justify-content: flex-end;
+    column-gap: 36px;
     background-color: transparent;
+  }
+
+  @media #{$desktop-only} {
+    column-gap: 35px;
   }
 }
 
@@ -90,13 +95,14 @@
 .main-navigation__link {
   @include link;
   @include shape;
-  padding: 22px 0 23px 0;
+  padding: 22px 10px 23px 10px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
   border-bottom: solid 1px #e6e6e6;
 
   @media #{$not-mobile} {
+    padding: 19px 0 23px 0;
     font-family: $accent-font;
     font-weight: 400;
     font-size: 18px;
@@ -104,12 +110,20 @@
     border: none;
   }
 
+  @media #{$desktop-only} {
+    font-size: 20px;
+  }
+
   &[aria-current="step"] {
     pointer-events: none;
 
     @media #{$not-mobile} {
       text-decoration: underline 2px $green;
-      text-underline-offset: 10px;
+      text-underline-offset: 12px;
+    }
+
+    @media #{$desktop-only} {
+      text-underline-offset: 11px;
     }
   }
 }

@@ -17,19 +17,19 @@
   padding: 25px 0 40px 0;
 
   @media #{$not-mobile} {
-    padding-bottom: 100px;
+    padding: 43px 0 100px 0;
   }
 
   @media #{$desktop-only} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 75px;
+    padding: 69px 0 70px 0;
   }
 }
 
 .slider__title {
   @include title;
-  margin-bottom: 40px;
+  margin: 0 0 40px 0;
 
   @media #{$mobile-only} {
     --line: 1.1;
@@ -51,6 +51,7 @@
   @media #{$desktop-only} {
     grid-column: 1/2;
     max-width: 436px;
+    margin: 0;
   }
 }
 
@@ -59,29 +60,35 @@
 
   @media #{$not-mobile} {
     margin-bottom: 54px;
+    line-height: 24px;
+  }
+
+  @media #{$desktop-only} {
+    margin:0 0 69px 0;
   }
 }
 
 .slider__outlay {
   padding: 0;
   display: grid;
-  gap: 32px;
+  column-gap: 32px;
   grid-template-columns: repeat(2, 1fr);
 
   @media #{$not-mobile} {
     grid-template-columns: 162px 162px 1fr;
-    margin-bottom: 99px;
+    margin-bottom: 70px;
+    column-gap: 42px;
   }
 
   @media #{$desktop-only} {
-    --column-count: 2;
-    gap: 60px 42px;
-    margin-bottom: 0;
+    grid-template-columns: 162px 162px;
+    gap: 41px 42px;
+    margin: 0;
   }
 }
 
 .slider__outlay-meaning {
-  padding: 14px 20px 27px 20px;
+  padding: 12px 20px 16px 20px;
   font-family: $accent-font;
   font-size: 24px;
   line-height: 1;
@@ -92,6 +99,7 @@
   @media #{$not-mobile} {
     font-size: 30px;
     line-height: 1.23;
+    padding: 15px 20px 18px 20px;
   }
 }
 
@@ -104,15 +112,19 @@
   text-align: center;
   width: 87px;
   background-color: $additional-gray;
-  padding: 14px 4px;
+  padding: 5px 4px;
   bottom: 0;
-  transform: translateY(50%);
+  transform: translateY(65%);
+  text-transform: none;
+  max-height: 50px;
+  overflow: hidden;
 
   @media #{$not-mobile} {
     font-size: 14px;
     background-color: #ffffff;
     width: auto;
     padding: 14px 10px 14px 8px;
+    transform: translateY(50%);
   }
 
   @media #{$desktop-only} {
@@ -122,15 +134,22 @@
 
 .slider__characteristic {
   position: relative;
+  margin-bottom: 35px;
   align-self: start;
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-transform: uppercase;
   border: solid 1px #cdcdcd;
   border-radius: 3px;
+
+  @media #{$desktop-only} {
+    margin-bottom: 10px;
+  }
 }
 
 .slider__characteristic--total {
+  margin-bottom: 0;
   font-family: $accent-font;
   line-height: 1.4;
   border: none;
@@ -141,22 +160,27 @@
   @media #{$not-mobile} {
     text-align: right;
     font-size: 20px;
-    display: flex;
+    padding-top: 7px;
+  }
+
+  @media #{$tablet-only} {
     flex-direction: column;
-    grid-column: 3/4;
+    grid-column: -2/-1;
+    grid-row: 1/999;
+    justify-self: flex-end;
   }
 
   @media #{$desktop-only} {
-    grid-column: 1/-1;
-    flex-direction: row;
     justify-self: flex-start;
+    padding-left: 2px;
   }
 }
 
 .slider__image-wrapper {
+  position: relative;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 50% auto 50%;
+  grid-template-columns: repeat(2, 1fr);
   width: min(100%, 280px);
   aspect-ratio: 280/256;
 
@@ -167,7 +191,7 @@
   @media #{$desktop-only} {
     grid-column: 2/3;
     grid-row: 1/3;
-    margin-top: 49px;
+    margin-left: 49px;
   }
 }
 
@@ -187,7 +211,9 @@
 }
 
 .slider__control {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 50%;
   width: 4px;
   height: 100%;
   background-color: #666666;

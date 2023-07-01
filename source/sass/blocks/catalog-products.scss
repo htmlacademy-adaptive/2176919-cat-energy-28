@@ -1,5 +1,14 @@
 .catalog-products__container {
   @include centerer;
+  padding: 27px 0 1px 0;
+
+  @media #{$not-mobile} {
+    padding: 46px 0 0 0;
+  }
+
+  @media #{$desktop-only} {
+    padding-top: 62px;
+  }
 }
 
 .catalog-products__list {
@@ -11,25 +20,39 @@
 
   @media #{$not-mobile} {
     --column-count: 2;
-    gap: 60px;
+    gap: 63px 60px;
     align-items: start;
   }
 
   @media #{$desktop-only} {
     --column-count: 4;
-    gap: 80px;
+    gap: 46px 80px;
   }
 }
 
 .catalog-products__title {
   @include title;
+  margin: 0 0 41px 0;
 
   @media #{$not-mobile} {
     --size: 60px;
-    margin-bottom: 90px;
+    margin-bottom: 85px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 67px;
   }
 }
 
 .catalog-products__special-offer {
   margin: 35px 0;
+
+  @media #{$not-mobile} {
+    margin: 69px 0 76px 0;
+  }
+
+  @media #{$desktop-only} {
+    margin: 16px 0 0 0;
+
+  }
 }
