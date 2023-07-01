@@ -12,7 +12,7 @@
   display: block;
 
   @media #{$not-mobile} {
-   line-height: 1.25;
+    line-height: 1.25;
 
     &:last-child {
       margin-top: 20px;
