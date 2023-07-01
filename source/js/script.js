@@ -23,20 +23,37 @@ if (searchMap) {
   myPlacemark;
 
   var iconWidth,
-  iconHeight;
+  iconHeight,
+  mapZoom,
+  iconOffsetX,
+  iconOffsetY;
 
   if (viewportWidth < 768) {
     iconWidth = 57;
     iconHeight = 53;
+    mapZoom = 14.2;
+    iconOffsetX = -25;
+    iconOffsetY = -42;
   } else {
-    iconWidth = 113;
-    iconHeight = 106;
+    if (viewportWidth > 768 && viewportWidth < 1440) {
+      iconWidth = 113;
+      iconHeight = 106;
+      mapZoom = 15.5;
+      iconOffsetX = -50;
+      iconOffsetY = -55;
+  } else {
+      iconWidth = 113;
+      iconHeight = 106;
+      mapZoom = 17;
+      iconOffsetX = 187;
+      iconOffsetY = -70;
+    }
   }
 
   function init(){
     myMap = new ymaps.Map(map, {
       center: [59.938631, 30.323037],
-      zoom: 16,
+      zoom: mapZoom,
       controls: []
     },
     {suppressMapOpenBlock: true});
@@ -48,7 +65,7 @@ if (searchMap) {
           iconLayout: 'default#image',
           iconImageHref: './img/map-pin.png',
           iconImageSize: [iconWidth, iconHeight],
-          iconImageOffset: [-25, -42]
+          iconImageOffset: [iconOffsetX, iconOffsetY]
         });
     myMap.geoObjects.add(myPlacemark);
     myMap.behaviors.disable('scrollZoom');
