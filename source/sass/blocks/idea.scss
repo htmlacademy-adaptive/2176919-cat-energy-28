@@ -1,0 +1,126 @@
+.idea {
+  @media #{$tablet-only} {
+    border-bottom: solid 1px #e6e6e6;
+  }
+}
+
+.idea__container {
+  @include centerer;
+  padding: 20px 0 49px 0;
+
+  @media #{$not-mobile} {
+    padding: 43px 1px 104px 1px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 71px 0 57px 0;
+  }
+}
+
+.idea__list {
+  @include reset-list;
+  margin: 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(var(--column-count, 1), 1fr);
+
+  @media #{$not-mobile} {
+    --column-count: 2;
+    gap: 134px 61px;
+  }
+
+  @media #{$desktop-only} {
+    --column-count: 4;
+    gap: 75px;
+  }
+}
+
+.idea__title {
+  @include title;
+  margin: 0 0 40px 0;
+
+  @media #{$mobile-only} {
+    --line: 1.1;
+  }
+
+  @media #{$not-mobile} {
+    margin-bottom: 72px;
+    --size: 60px;
+  }
+}
+
+.idea__item {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+
+  @media #{$not-mobile} {
+    flex-direction: column;
+    counter-increment: list-item;
+    align-items: flex-start;
+    gap: 31px;
+  }
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $green;
+    flex-shrink: 0;
+    background-size: 32px 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media #{$not-mobile} {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--leaf::before {
+    background-image: url("../img/stack.svg#leaf");
+  }
+
+  &--powder::before {
+    background-image: url("../img/stack.svg#powder");
+  }
+
+  &--eating::before {
+    background-image: url("../img/stack.svg#eating");
+  }
+
+  &--alarm::before {
+    background-image: url("../img/stack.svg#alarm");
+  }
+
+  @media #{$not-mobile} {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: -40px;
+      left: 116px;
+      content: counter(list-item);
+      font-family: $accent-font;
+      font-size: 280px;
+      line-height: 1;
+      color: #f2f2f2;
+      z-index: -1;
+    }
+  }
+}
+
+.idea__description {
+  margin: 0;
+
+  @media #{$mobile-only} {
+    br {
+      display: none;
+    }
+  }
+
+  @media #{$not-mobile} {
+    width: 250px;
+    line-height: 1.5;
+  }
+}

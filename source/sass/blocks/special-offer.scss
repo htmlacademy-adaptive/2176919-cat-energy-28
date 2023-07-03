@@ -1,0 +1,83 @@
+.special-offer {
+  position: relative;
+  background-image: url("../img/cat-catalog-bag-mobile@1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #9b9b9b;
+  width: auto;
+  height: 290px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 290px;
+    background-color: $green;
+    opacity: 0.85;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 82px;
+    height: 82px;
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/stack.svg#gift");
+
+    @media #{$tablet-only} {
+      top: 49%;
+      left: 77px;
+      transform: translateY(-50%);
+    }
+
+    @media #{$desktop-only} {
+      top: 56px;
+      left: 51%;
+    }
+  }
+
+  @media #{$not-mobile} {
+    background-image: url("../img/cat-catalog-bag-tablet@1.jpg"), linear-gradient(to right, #1b1b1b, #fcfcfc);
+    width: 100%;
+    height: 200px;
+
+    &::before {
+      height: 200px;
+    }
+  }
+
+  @media #{$desktop-only} {
+    grid-column: 2/3;
+    background-image: url("../img/cat-catalog-bag-desktop@1.jpg");
+    height: 289px;
+
+    &::before {
+      max-width: 250px;
+      height: 289px;
+    }
+  }
+}
+
+.special-offer__text {
+  margin: 0;
+  padding: 186px 61px 43px 58px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #ffffff;
+  z-index: 1;
+  text-align: center;
+
+  @media #{$tablet-only} {
+    padding: 71px 124px 69px 422px;
+    text-align: left;
+  }
+
+  @media #{$desktop-only} {
+    padding: 185px 43px 42px 40px;
+  }
+}

@@ -1,1 +1,28 @@
-// Начните писать стили здесь
+// глобальные стили
+@import "./global/global";
+@import "./global/fonts";
+@import "./global/variables";
+@import "./global/mixins";
+
+// стили блоков
+@import "./blocks/page";
+@import "./blocks/main-header";
+@import "./blocks/main-navigation";
+@import "./blocks/visually-hidden";
+@import "./blocks/intro";
+@import "./blocks/want";
+@import "./blocks/idea";
+@import "./blocks/slider";
+@import "./blocks/outlay";
+@import "./blocks/map";
+@import "./blocks/address";
+@import "./blocks/page-footer";
+@import "./blocks/copyright";
+@import "./blocks/program";
+@import "./blocks/main-inner";
+@import "./blocks/catalog-products";
+@import "./blocks/product-card";
+@import "./blocks/show";
+@import "./blocks/additional";
+@import "./blocks/additional-card";
+@import "./blocks/special-offer";

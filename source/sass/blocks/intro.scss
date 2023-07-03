@@ -1,0 +1,148 @@
+.intro {
+  font-family: $accent-font;
+  line-height: 1;
+
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 302px;
+    background-color: $green;
+    opacity: 0.85;
+  }
+
+  @media #{$mobile-only} {
+    color: #ffffff;
+    background: url("../img/cat-background-mobile@1.jpg"), linear-gradient(to right, #504f55, #434348);
+    background-size: auto 302px;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    &::before {
+      content: "";
+    }
+  }
+
+  @media #{$desktop-only} {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 694px;
+      left: 50%;
+      top: 0;
+      background-color: #414044;
+      background-image: url("../img/cat-background-desktop@1.jpg");
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+
+    &::before {
+      content: "";
+      height: 694px;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+    }
+  }
+}
+
+.intro__container {
+  @include centerer;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  padding: 27px 0 20px 0;
+  text-align: center;
+  z-index: 1;
+
+  @media #{$not-mobile} {
+    position: relative;
+    text-align: left;
+    padding: 46px 0 526px 88px;
+  }
+
+  @media #{$desktop-only} {
+    padding: 97px 0 267px 80px;
+  }
+}
+
+.intro__description {
+  text-transform: uppercase;
+  margin: 0 0 29px 0;
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    margin: 0 0 48px 2px;
+  }
+
+  @media #{$desktop-only} {
+    width: 45%;
+    margin: 0 0 51px 0;
+  }
+}
+
+.intro__title {
+  @include title;
+  margin: 0 0 26px 0;
+  color: inherit;
+  font-stretch: extra-condensed;
+
+  @media #{$not-mobile} {
+    --size: 60px;
+    margin-bottom: 42px;
+  }
+
+  @media #{$desktop-only} {
+    width: 45%;
+    margin-bottom: 41px;
+  }
+}
+
+.intro__image {
+  @include img;
+}
+
+.intro__button {
+  @include link;
+  @include button;
+  width: 244px;
+
+  @media #{$mobile-only} {
+    order: 1;
+    width: 100%;
+  }
+
+  @media #{$not-mobile} {
+    --size: 20px;
+    margin-left: 3px;
+    padding: 14px;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: 0;
+  }
+
+  ~.intro__button {
+    margin-top: 8px;
+  }
+}
+
+.intro__image-wrapper {
+  margin-bottom: 3px;
+
+  @media #{$not-mobile} {
+    position: absolute;
+    width: 709px;
+    height: 609px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin-bottom: 0;
+  }
+
+  @media #{$desktop-only} {
+    left: 448px;
+    bottom: 26px;
+  }
+}

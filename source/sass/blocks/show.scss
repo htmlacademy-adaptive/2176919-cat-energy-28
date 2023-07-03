@@ -1,0 +1,93 @@
+.show {
+  position: relative;
+  padding: 81px 0 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  align-self: flex-end;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 25px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/stack.svg#catalog-cross");
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    @media #{$not-mobile} {
+      width: 60px;
+      height: 60px;
+      top: 48px;
+    }
+  }
+
+  @media #{$not-mobile} {
+    padding: 159px 37px 38px 38px;
+    border: solid 2px $gray;
+  }
+
+  @media #{$mobile-only} {
+    @include gray-stripes;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.show__title {
+  @include title;
+  --size: 16px;
+  --line: 1.25;
+  text-transform: uppercase;
+  position: relative;
+  color: #111111;
+  margin: 0 0 8px 0;
+
+  @media #{$not-mobile} {
+    --size: 20px;
+    --line: 1.1;
+    margin-bottom: 21px;
+  }
+
+  @media #{$desktop-only} {
+    margin-bottom: 22px;
+  }
+}
+
+.show__description {
+  @include text;
+  --size: 12px;
+  margin: 0 0 21px 0;
+
+  @media #{$not-mobile} {
+    --size: 16px;
+    --line: 1.13;
+    margin-bottom: 87px;
+  }
+}
+
+.show__link {
+  @include link;
+  --size: 16px;
+  --line: 1.25;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
+  background-color: #f2f2f2;
+  color: $dark-gray;
+  text-align: center;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}

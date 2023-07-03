@@ -1,0 +1,16 @@
+.page {
+  @include text;
+  width: 100%;
+  height: 100%;
+  counter-reset: list-item;
+
+  @media #{$not-mobile} {
+    --size: 16px;
+  }
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+}

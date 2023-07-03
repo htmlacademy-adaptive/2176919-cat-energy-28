@@ -1,0 +1,17 @@
+.outlay__meaning {
+  margin-left: 4px;
+
+  @media #{$tablet-only} {
+    align-self: flex-end;
+  }
+
+  @media #{$desktop-only} {
+    margin-left: 63px;
+  }
+}
+
+.outlay__characteristic {
+  @media #{$tablet-only} {
+    align-self: flex-end;
+  }
+}
