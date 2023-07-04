@@ -206,6 +206,10 @@
   ~ .program__label-text::after {
     background-color: #ff8282;
   }
+
+  &:focus {
+    outline: solid 2px #ff8282;
+  }
 }
 
 .program__input-control {
@@ -228,6 +232,10 @@
     --size: 16px;
     --line: 1;
     padding-top: 15px;
+  }
+
+  @media #{$desktop-only} {
+    padding-top: 17px;
   }
 }
 

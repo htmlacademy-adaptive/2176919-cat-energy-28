@@ -129,6 +129,10 @@
     right: 0;
     box-shadow: 100vw 0 $green;
     z-index: -1;
+
+    @media #{$desktop-only} {
+      top: calc(var(--size) / 2 * var(--line) + 4px);
+    }
   }
 
   &::after {
