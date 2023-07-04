@@ -273,6 +273,7 @@
 
 .program__group--additionally {
   padding: 0 0 16px 0;
+  display: block;
 
   @media #{$not-mobile} {
     padding: 8px 0 0 1px;
